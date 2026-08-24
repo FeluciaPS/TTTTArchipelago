@@ -2,10 +2,6 @@
 # Archipelago-specific items such as "Breenklap Dig Spot" can be found in
 # items_world.py.
 
-from .base_ids import BASE_ID_ITEM_INVENTORY
-from ...world import TTTTWorld
-
-
 SHOP_HAT_NAMES = [
     "Diving Goggles",
     "Snow Hat",

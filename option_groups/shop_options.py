@@ -59,6 +59,6 @@ class ShopItemCount(OptionCounter):
     display_name  = "Shop Item Counts"
     min = 1
     max = 25
-    default = {shop: count for shop, count in DEFAULT_SHOP_ITEM_COUNTS}
+    default = {shop: count for shop, count in DEFAULT_SHOP_ITEM_COUNTS.items()}
     valid_keys = SHOP_NAMES
 

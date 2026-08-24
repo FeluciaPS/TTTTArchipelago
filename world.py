@@ -30,7 +30,7 @@ class TTTTWorld(World):
         return False
 
     location_name_to_id = ITEM_IDS
-    item_name_to_id = items.ITEM_NAME_TO_ID
+    item_name_to_id = {} # items.ITEM_NAME_TO_ID
 
     origin_region_name = OVERWORLD_NAME
 
@@ -57,7 +57,7 @@ class TTTTWorld(World):
     def create_items(self) -> None:
         items.create_itempool(self)
 
-    def create_item(self, name: str) -> items.GarfKartItem:
+    def create_item(self, name: str) -> items.TTTTItem:
         return items.create_item_object(self, name)
     
     def get_filler_item_name(self) -> str:
