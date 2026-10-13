@@ -22,7 +22,7 @@ def set_all_location_rules(world: TTTTWorld) -> None:
 
 
 def set_completion_condition(world: TTTTWorld) -> None:
-    space_rule = Has("Turbo Upgrade", world.options.turbo_requirement) & OptionFilter(Goal, Goal.option_space)
+    space_rule = Has("Turbo Upgrade", world.options.turbo_requirement.value) & OptionFilter(Goal, Goal.option_space)
 
     completion_rule = space_rule
     world.set_completion_rule(completion_rule)

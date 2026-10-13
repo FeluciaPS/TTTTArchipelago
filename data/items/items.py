@@ -7,8 +7,8 @@ ITEM_IDS = {}
 for name in INVENTORY_ITEM_IDS:
     ITEM_IDS[name] = INVENTORY_ITEM_IDS[name] + BASE_ID_ITEM_INVENTORY
 
-for name in INVENTORY_ITEM_IDS:
-    ITEM_IDS[name] = INVENTORY_ITEM_IDS[name] + BASE_ID_ITEM_WORLD
+for name in WORLD_ITEM_IDS:
+    ITEM_IDS[name] = WORLD_ITEM_IDS[name] + BASE_ID_ITEM_WORLD
 
 def get_item_ids_by_name(names: list[str]):
     result = {}

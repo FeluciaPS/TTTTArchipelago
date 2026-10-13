@@ -13,3 +13,11 @@ DEFAULT_SHOP_ITEM_COUNTS = {
     "Hat Store (Red)": 7,
     "Junk Store": 6
 }
+
+BASE_SHOP_LOCATION_IDS = {
+    "Beach Club": 100,
+    "Hat Store (Blue)": 125,
+    "Hat Store (Green)": 150,
+    "Hat Store (Red)": 175,
+    "Junk Store": 200,
+}

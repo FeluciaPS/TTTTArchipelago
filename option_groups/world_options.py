@@ -46,3 +46,15 @@ class StartWithTurboUpgrade(Toggle):
     Because going fast is fun.
     """
     display_name = "Start With Turbo Upgrade"
+
+class RandomizeMap(Choice):
+    """
+    Randomizes the map unlock 
+    """
+    display_name = "Randomize Map"
+
+    option_off = 0
+    option_early = 1
+    option_on = 2
+
+    default = 1

@@ -15,7 +15,7 @@ REGION_DEFS = {
     "Terry's Apartment": {
         "parent": "Binnenrot Apartment Building",
         "required_items": {
-            "Terry Apartment Keys": 1,
+            "Terry's Apartment Keys": 1,
             "Progressive Apartment Key": 2
         }
     }

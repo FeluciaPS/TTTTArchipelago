@@ -55,7 +55,7 @@ class TTTTWorld(World):
         rules.set_all_rules(self)
 
     def create_items(self) -> None:
-        items.create_itempool(self)
+        items.create_all_items(self)
 
     def create_item(self, name: str) -> items.TTTTItem:
         return items.create_item_object(self, name)

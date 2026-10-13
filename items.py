@@ -56,7 +56,7 @@ def create_all_items(world: TTTTWorld) -> None:
     ]
 
     # At least one weapon should be in the itempool
-    random_weapon = world.random.sample(WEAPON_ITEM_NAMES)
+    random_weapon = world.random.sample(WEAPON_ITEM_NAMES, 1)[0]
     itempool += [
         world.create_item(random_weapon)
     ]
@@ -84,7 +84,10 @@ def create_all_items(world: TTTTWorld) -> None:
         itempool += [
             world.create_item("Terry's Apartment Keys")
         ]
-
+    elif world.options.lock_doors == "on":
+        itempool += [
+            world.create_item(key) for key in KEY_ITEM_NAMES
+        ]
     # Compare item pool size to location size, and fill what's left with
     # filler items.
     item_count = len(itempool)

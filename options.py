@@ -11,10 +11,15 @@ class TTTTOptions(PerGameCommonOptions):
     goal: Goal
     turbo_requirement: TurboRequirement
 
+    # Shop Options
     randomize_shop_items: RandomizeShopItems
     randomize_shop_prices: RandomizeShopPrices
     shop_price_multiplier: ShopPriceMultiplier
     shop_item_count: ShopItemCount
+
+    # World Options
+    randomize_map: RandomizeMap
+    lock_doors: LockDoors
 
 option_groups = [
     OptionGroup(
@@ -28,6 +33,10 @@ option_groups = [
     OptionGroup(
         "Silly Options",
         [DutchItemNames],
+    ),
+    OptionGroup(
+        "World Options",
+        [RandomizeMap, LockDoors]
     )
 ]
 

@@ -1,6 +1,9 @@
 # Data file for archipelago-specific items, such as "Breenklap Dig Spot".
 # Inventory items such as the Sun Hat or Map can be found in items_inventory.py.
 
+from worlds.tttt.data.regions import REGION_DEFS
+
+
 DIG_SPOT_ITEM_NAMES = [
     "Olger Dig Spot",      # Laundry hint guy
     "Spepely Dig Spot",    # Job center receptionist
@@ -33,12 +36,20 @@ WORLD_MECHANIC_UNLOCK_ITEM_NAMES = [
     "Weaker Car Locks",
 ]
 
+WORLD_ARCHIPELAGO_KEY_ITEMS = [
+    item 
+        for region in REGION_DEFS
+        if "required_items" in REGION_DEFS[region]
+        for item in REGION_DEFS[region]["required_items"]
+]
+
 WORLD_ITEM_NAMES = [
     *DIG_SPOT_ITEM_NAMES,
     *TRASH_CAN_UNLOCK_ITEM_NAMES,
     *WORLD_MECHANIC_UNLOCK_ITEM_NAMES,
+    *WORLD_ARCHIPELAGO_KEY_ITEMS
 ]
 
-BASE_ITEM_IDS = [
-
-]
+BASE_ITEM_IDS = {
+    key: int(value) for value, key in enumerate(WORLD_ITEM_NAMES)
+}

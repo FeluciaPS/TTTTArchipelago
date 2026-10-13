@@ -30,7 +30,7 @@ def get_access_rule(world: TTTTWorld, required_items: dict[str, int]) -> Rule:
         return None
 
     # The performance gain from not using HasAllCounts is practically nonexistent
-    # but I'm using it conditionally
+    # but I'm using it conditionally anyways
     if needs_counts:
         return HasAllCounts(requirements)
 
@@ -41,7 +41,7 @@ def get_access_rule(world: TTTTWorld, required_items: dict[str, int]) -> Rule:
     item = required_items[0]
     return Has(item)
 
-def get_entrance_rules(world: TTTTWorld, name):
+def get_entrance_rules(world: TTTTWorld, name: str):
     data = REGION_DEFS[name]
 
     parent = data.get("parent", None)
